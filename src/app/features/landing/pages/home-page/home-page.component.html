@@ -157,6 +157,14 @@
             >Express Cabinets</a
           >
         </div>
+        <div class="pe-3">
+          <a
+            class="link-hover user-select-none"
+            (click)="selectedSlider = 'luxury-cabinets'"
+            [ngClass]="{ 'active-link': selectedSlider === 'luxury-cabinets' }"
+            >Premium Series</a
+          >
+        </div>
       </div>
     </div>
     <div class="">
@@ -166,6 +174,9 @@
       <app-express-cabinets
         *ngIf="selectedSlider === 'express-cabinets'"
       ></app-express-cabinets>
+      <app-luxury-cabinets
+        *ngIf="selectedSlider === 'luxury-cabinets'"
+      ></app-luxury-cabinets>
     </div>
   </div>
 </section>

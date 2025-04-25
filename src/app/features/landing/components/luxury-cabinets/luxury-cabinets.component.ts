@@ -1,18 +1,19 @@
 import { Component } from '@angular/core';
 import Splide from '@splidejs/splide';
+
 @Component({
-  selector: 'app-express-cabinets',
+  selector: 'app-luxury-cabinets',
   imports: [],
-  templateUrl: './express-cabinets.component.html',
-  styleUrl: './express-cabinets.component.css',
+  templateUrl: './luxury-cabinets.component.html',
+  styleUrl: './luxury-cabinets.component.css',
 })
-export class ExpressCabinetsComponent {
+export class LuxuryCabinetsComponent {
   ngOnInit() {
-    this.initializeExpressCabinetsSlider();
+    this.initializeLuxurySlider();
   }
 
-  initializeExpressCabinetsSlider() {
-    new Splide('#express-cabinets', {
+  initializeLuxurySlider() {
+    new Splide('#luxury-cabinets', {
       type: 'loop',
       drag: 'free',
       speed: 130,
