@@ -14,6 +14,9 @@ export class AllCabinetsComponent {
   initializeAllCabinetsSlider() {
     new Splide('#all-cabinets', {
       type: 'loop',
+      drag: 'free',
+      speed: 130,
+      snap: true,
       perPage: 6,
       focus: 'center',
       pagination: false,

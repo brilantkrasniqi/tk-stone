@@ -26,12 +26,16 @@
 ::ng-deep #all-cabinets .splide:not(.is-overflow) .splide__list {
   justify-content: center;
 }
-::ng-deep #all-cabinets .is-visible img,
-::ng-deep #all-cabinets .is-prev img,
-::ng-deep #all-cabinets .is-next img {
-  transform: scale(0.9);
-  transition: transform 0.3s ease-in-out;
+::ng-deep #all-cabinets img {
+  transform: scale(0.7);
+  transition: transform 0.15s ease-in-out;
 }
 ::ng-deep #all-cabinets .is-active img {
   transform: scale(1);
+}
+::ng-deep #all-cabinets .splide__slide .slide-door-info {
+  visibility: hidden;
+}
+::ng-deep #all-cabinets .is-active .slide-door-info {
+  visibility: visible !important;
 }
