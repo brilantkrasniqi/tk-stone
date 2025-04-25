@@ -1,1 +1,146 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Poppins";
+  src: url("assets/fonts/Poppins-Black.ttf") format("truetype");
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("assets/fonts/Poppins-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("assets/fonts/Poppins-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("assets/fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("assets/fonts/Poppins-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("assets/fonts/Poppins-Thin.ttf") format("truetype");
+  font-weight: 100;
+}
+
+:root {
+  --dark-color: #030404;
+  --dark-gray: #646565;
+  --gray-text: #8a949c;
+  --gray-background: #c7c7c7;
+  --main-orange: #ec4e15;
+}
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: var(--dark-color) !important;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  padding: 0 !important;
+  margin: 0 !important;
+  list-style-type: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+li {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+p,
+a,
+li {
+  font-size: clamp(0.875rem, 0.407vw + 0.767rem, 1.25rem);
+}
+
+h1 {
+  font-size: clamp(1.875rem, 2.034vw + 1.335rem, 3.75rem);
+}
+h2 {
+  font-size: clamp(1.25rem, 2.034vw + 0.71rem, 3.125rem);
+}
+h3 {
+  font-size: clamp(1rem, 0.949vw + 0.748rem, 1.875rem);
+}
+
+/* Utilities */
+.custom-container {
+  padding-left: clamp(1.25rem, 8.136vw - 0.911rem, 8.75rem) !important;
+  padding-right: clamp(1.25rem, 8.136vw - 0.911rem, 8.75rem) !important;
+}
+.w-fit {
+  max-width: fit-content !important;
+}
+
+.bg-dark-main {
+  background-color: var(--dark-color);
+}
+
+.see-more {
+  padding: 0.55rem 0.725rem !important;
+  border-bottom: 2px solid var(--main-orange);
+}
+.custom-padding-1 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.custom-padding-2 {
+  padding-top: 5.625rem;
+  padding-bottom: 5.625rem;
+}
+
+.orange-text {
+  color: var(--main-orange) !important;
+}
+
+.gray-line {
+  display: block;
+  width: 90px;
+  height: 3px;
+  background-color: var(--dark-gray);
+}
+/* Custom Style */
+.link-hover {
+  background-image: linear-gradient(var(--main-orange) 0 0);
+  background-position: 0 100%;
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  transition:
+    background-size 0.3s,
+    background-position 0s 0.3s;
+}
+.link-hover:hover {
+  background-position: 100% 100%;
+  background-size: 100% 2px;
+}
+.active-link {
+  background-image: linear-gradient(var(--main-orange) 0 0);
+  background-position: 100% 100%;
+  background-size: 100% 2px;
+  background-repeat: no-repeat;
+  font-weight: 500;
+}

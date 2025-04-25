@@ -1,0 +1,136 @@
+<div class="sticky-top bg-white">
+  <div class="custom-container">
+    <div class="row py-xl-4 py-3 d-flex align-items-center">
+      <div class="col-xl-4 col-2">
+        <div class="d-xl-none d-block">
+          <div (click)="openMenu($event)" class="hamburger" type="button">
+            <span class="line"></span>
+            <span class="line"></span>
+          </div>
+        </div>
+        <ul class="d-xl-flex nav-menu">
+          <li class="d-xl-none d-flex justify-content-between py-5">
+            <span class="mobile-search d-flex align-items-center">
+              <img
+                class=""
+                type="button"
+                (click)="openSearchBar($event)"
+                width="22"
+                height="22"
+                ngSrc="images/svg/search.svg"
+                alt="Search"
+              />
+              <input
+                type="search"
+                class="search-mobile-active"
+                name="search"
+                id="searchMobile"
+              />
+            </span>
+          </li>
+          <span
+            type="button"
+            class="closeBtn d-xl-none d-inline-block"
+            (click)="openMenu($event)"
+          >
+            <img ngSrc="images/svg/X.svg" width="22" height="22" alt="Close" />
+          </span>
+          <li class="pe-xl-3">
+            <a
+              class="link-hover text-nowrap"
+              routerLink="/products"
+              routerLinkActive="active-link"
+              >products</a
+            >
+          </li>
+          <li class="pe-xl-3">
+            <a class="link-hover text-nowrap" href="#2">about us</a>
+          </li>
+          <li class="pe-xl-3">
+            <a class="link-hover text-nowrap" href="#">gallery</a>
+          </li>
+          <li class="pe-xl-3">
+            <a class="link-hover text-nowrap" href="#">blog</a>
+          </li>
+          <li><a class="link-hover text-nowrap" href="#">contact us</a></li>
+          <div class="d-xl-none socialsNav">
+            <a href="#">
+              <img
+                ngSrc="images/svg/fb.svg"
+                width="24"
+                height="24"
+                alt="Facebook"
+                class="me-4"
+              />
+            </a>
+            <a href="#">
+              <img
+                ngSrc="images/svg/insta.svg"
+                width="24"
+                height="24"
+                alt="Instagram"
+                class="me-4"
+              />
+            </a>
+            <a href="#">
+              <img
+                ngSrc="images/svg/linkedin.svg"
+                width="24"
+                height="24"
+                alt="LinkedIn"
+              />
+            </a>
+          </div>
+        </ul>
+      </div>
+      <div class="col-xl-4 col-5 d-flex justify-content-center">
+        <a routerLink="/">
+          <img
+            class="w-100"
+            priority=""
+            ngSrc="images/svg/Logo.svg"
+            width="200"
+            height="44"
+            alt="Mega Solutions"
+          />
+        </a>
+      </div>
+      <div class="col-xl-4 col-5">
+        <div class="d-flex align-items-center justify-content-end">
+          <div class="d-flex pe-sm-5 pe-0">
+            <img
+              class="me-sm-3 me-2"
+              width="22"
+              height="22"
+              ngSrc="images/svg/useraccount.svg"
+              alt="Account"
+            />
+            <img
+              class="me-sm-3 me-2"
+              width="22"
+              height="22"
+              ngSrc="images/svg/Cart.svg"
+              alt="Cart"
+            />
+            <img
+              class="me-sm-3 me-2"
+              width="22"
+              height="22"
+              ngSrc="images/svg/wishlist.svg"
+              alt="Wishlist"
+            />
+          </div>
+          <div class="d-xl-block d-none">
+            <img
+              class=""
+              width="22"
+              height="22"
+              ngSrc="images/svg/search.svg"
+              alt="Search"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

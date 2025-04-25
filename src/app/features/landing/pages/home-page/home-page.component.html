@@ -1,0 +1,180 @@
+<section id="hero-section">
+  <div class="container-fluid">
+    <div class="row">
+      <div
+        class="col-xl-5 col-12 d-flex align-items-center justify-content-center position-relative bg-dark-main z-1 hero-left"
+      >
+        <div
+          class="d-flex flex-column align-items-xl-start align-items-center justify-content-center hero-content"
+        >
+          <h1
+            class="text-white m-0 overflow-y-hidden fw-bold text-xl-start text-center"
+          >
+            Lorem ipsum dolor sit amet
+          </h1>
+          <p class="text-white pb-xl-5 pb-3 text-xl-start text-center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque,
+            molestias?
+          </p>
+          <a href="#" class="mt-xl-5 text-white see-more w-fit">see more</a>
+        </div>
+      </div>
+      <div
+        class="col-xl-7 col-12 position-relative order-xl-last order-first hero-right p-0 z-2 overflow-visible"
+      >
+        <div class="splide" id="hero-slider">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <img
+                  src="images/other/her-door.png"
+                  class="hero-door"
+                  alt="Hero Door"
+                  width="238"
+                  height="400"
+                />
+                <img
+                  ngSrc="images/other/slider-image-2.png"
+                  class="object-fit-cover hero-main-image"
+                  fill
+                  priority=""
+                  alt="Hero Image"
+                />
+              </li>
+              <li class="splide__slide">
+                <img
+                  ngSrc="images/other/door-1.png"
+                  class="hero-door"
+                  alt="Hero Door"
+                  width="238"
+                  height="400"
+                />
+                <img
+                  ngSrc="images/other/slider-image-1.png"
+                  class="object-fit-cover hero-main-image"
+                  fill
+                  priority=""
+                  alt="Hero Image"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section Section -->
+<section class="custom-padding-1">
+  <div class="custom-container">
+    <div class="row">
+      <div class="col-xl-6 col-12">
+        <div
+          class="d-xl-inline-block d-flex flex-column align-items-center pb-xl-0 pb-5"
+        >
+          <h2 class="pb-4">
+            Trusted by over <span class="fw-bold">650 clients</span>
+          </h2>
+          <span class="gray-line mt-5"></span>
+        </div>
+      </div>
+      <div class="col-xl-6 col-12">
+        <div
+          class="d-flex align-items-center w-100 justify-content-evenly flex-wrap"
+        >
+          <div
+            class="d-flex flex-column align-items-center mt-md-0 mt-3"
+            style="width: 150px"
+          >
+            <img
+              ngSrc="images/svg/projects-svg.svg"
+              width="80"
+              height="80"
+              alt="Projects"
+            />
+            <h2 class="orange-text fw-bold pt-4">80</h2>
+            <p>projects</p>
+          </div>
+          <div
+            class="d-flex flex-column align-items-center mt-md-0 mt-3"
+            style="width: 150px"
+          >
+            <img
+              ngSrc="images/svg/clients-svg.svg"
+              width="80"
+              height="80"
+              alt="Happy Clients"
+            />
+            <h2 class="orange-text fw-bold pt-4">365</h2>
+            <p>happy clients</p>
+          </div>
+          <div
+            class="d-flex flex-column align-items-center mt-md-0 mt-3"
+            style="width: 150px"
+          >
+            <img
+              ngSrc="images/svg/team-members-svg.svg"
+              width="80"
+              height="80"
+              alt="Team Members"
+            />
+            <h2 class="orange-text fw-bold pt-4">30</h2>
+            <p class="text-nowrap">team members</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Second Section-->
+
+<section class="custom-padding-2" style="background-color: #c7c7c7">
+  <div class="row">
+    <div class="col-md-4 col-0 d-md-block d-none"></div>
+    <div class="col-md-4 col-12">
+      <h2 class="fw-light px-5 text-center">
+        Elevate Your Space with <span class="fw-bold">Our Cabinets</span>
+      </h2>
+    </div>
+    <div class="col-md-4 col-0 d-md-block d-none"></div>
+    <div class="col-12 pt-5">
+      <div class="d-flex align-items-center justify-content-center">
+        <div class="pe-3">
+          <a
+            routerLink="all-cabinets"
+            routerLinkActive="active-link"
+            class="link-hover user-select-none"
+            >All</a
+          >
+        </div>
+        <div class="pe-3">
+          <a
+            routerLink="express-cabinets"
+            routerLinkActive="active-link"
+            class="link-hover user-select-none"
+            >Express Series</a
+          >
+        </div>
+        <div class="pe-3">
+          <a
+            routerLink="all-cabinets"
+            routerLinkActive="active-link"
+            class="link-hover user-select-none"
+            >Premium Series</a
+          >
+        </div>
+        <div class="pe-0">
+          <a
+            routerLink="all-cabinets"
+            routerLinkActive="active-link"
+            class="link-hover user-select-none"
+            >Luxury Series</a
+          >
+        </div>
+      </div>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+</section>
