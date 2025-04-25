@@ -1,0 +1,37 @@
+::ng-deep #all-cabinets .splide__arrows {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+::ng-deep #all-cabinets .splide__arrow {
+  background-color: transparent;
+  border: none;
+}
+::ng-deep #all-cabinets .splide__arrow svg {
+  width: 18px;
+  height: 30px;
+  fill: rgba(141, 136, 136, 0.514);
+  transition: fill 0.15s;
+}
+::ng-deep #all-cabinets .splide__arrow--prev {
+  transform: rotate(180deg);
+  padding-left: 50px;
+}
+::ng-deep #all-cabinets .splide__arrow svg:hover,
+::ng-deep #all-cabinets .splide__arrow svg:active {
+  fill: black;
+}
+
+::ng-deep #all-cabinets .splide:not(.is-overflow) .splide__list {
+  justify-content: center;
+}
+::ng-deep #all-cabinets .is-visible img,
+::ng-deep #all-cabinets .is-prev img,
+::ng-deep #all-cabinets .is-next img {
+  transform: scale(0.9);
+  transition: transform 0.3s ease-in-out;
+}
+::ng-deep #all-cabinets .is-active img {
+  transform: scale(1);
+}

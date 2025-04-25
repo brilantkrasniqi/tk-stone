@@ -143,38 +143,29 @@
       <div class="d-flex align-items-center justify-content-center">
         <div class="pe-3">
           <a
-            routerLink="all-cabinets"
-            routerLinkActive="active-link"
             class="link-hover user-select-none"
+            (click)="selectedSlider = 'all-cabinets'"
+            [ngClass]="{ 'active-link': selectedSlider === 'all-cabinets' }"
             >All</a
           >
         </div>
         <div class="pe-3">
           <a
-            routerLink="express-cabinets"
-            routerLinkActive="active-link"
             class="link-hover user-select-none"
-            >Express Series</a
-          >
-        </div>
-        <div class="pe-3">
-          <a
-            routerLink="all-cabinets"
-            routerLinkActive="active-link"
-            class="link-hover user-select-none"
-            >Premium Series</a
-          >
-        </div>
-        <div class="pe-0">
-          <a
-            routerLink="all-cabinets"
-            routerLinkActive="active-link"
-            class="link-hover user-select-none"
-            >Luxury Series</a
+            (click)="selectedSlider = 'express-cabinets'"
+            [ngClass]="{ 'active-link': selectedSlider === 'express-cabinets' }"
+            >Express Cabinets</a
           >
         </div>
       </div>
     </div>
-    <router-outlet></router-outlet>
+    <div class="">
+      <app-all-cabinets
+        *ngIf="selectedSlider === 'all-cabinets'"
+      ></app-all-cabinets>
+      <app-express-cabinets
+        *ngIf="selectedSlider === 'express-cabinets'"
+      ></app-express-cabinets>
+    </div>
   </div>
 </section>

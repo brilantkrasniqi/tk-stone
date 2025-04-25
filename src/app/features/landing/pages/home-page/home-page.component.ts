@@ -1,6 +1,5 @@
-import { NgOptimizedImage } from '@angular/common';
+import { NgClass, NgIf, NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router, RouterOutlet } from '@angular/router';
 import Splide from '@splidejs/splide';
 import { AllCabinetsComponent } from '../../components/all-cabinets/all-cabinets.component';
 import { ExpressCabinetsComponent } from '../../components/express-cabinets/express-cabinets.component';
@@ -8,14 +7,17 @@ import { ExpressCabinetsComponent } from '../../components/express-cabinets/expr
   selector: 'app-home-page',
   imports: [
     NgOptimizedImage,
-    RouterOutlet,
     AllCabinetsComponent,
     ExpressCabinetsComponent,
+    NgIf,
+    NgClass,
   ],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.css',
 })
 export class HomePageComponent {
+  selectedSlider: string = 'all-cabinets';
+
   ngOnInit() {
     this.initializeHeroSlider();
   }
