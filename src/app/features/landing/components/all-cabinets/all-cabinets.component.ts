@@ -21,6 +21,17 @@ export class AllCabinetsComponent {
       focus: 'center',
       pagination: false,
       lazyLoad: true,
+      breakpoints: {
+        1200: {
+          perPage: 4,
+        },
+        776: {
+          perPage: 3,
+        },
+        600: {
+          perPage: 1,
+        },
+      },
     }).mount();
   }
 }

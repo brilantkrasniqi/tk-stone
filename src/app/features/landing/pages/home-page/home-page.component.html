@@ -1,3 +1,4 @@
+<!-- Hero -->
 <section id="hero-section">
   <div class="container-fluid">
     <div class="row">
@@ -65,7 +66,7 @@
   </div>
 </section>
 
-<!-- Section Section -->
+<!-- First Section -->
 <section class="custom-padding-1">
   <div class="custom-container">
     <div class="row">
@@ -129,8 +130,7 @@
 </section>
 
 <!--Second Section-->
-
-<section class="custom-padding-2" style="background-color: #c7c7c7">
+<main class="custom-padding-2" style="background-color: #c7c7c7">
   <div class="row">
     <div class="col-md-4 col-0 d-md-block d-none"></div>
     <div class="col-md-4 col-12">
@@ -162,12 +162,13 @@
             class="link-hover user-select-none"
             (click)="selectedSlider = 'luxury-cabinets'"
             [ngClass]="{ 'active-link': selectedSlider === 'luxury-cabinets' }"
-            >Premium Series</a
+            >Luxury Series</a
           >
         </div>
       </div>
     </div>
     <div class="">
+      <!-- TODO: Add breakpoints to each slider, and see if we can refractor the code -->
       <app-all-cabinets
         *ngIf="selectedSlider === 'all-cabinets'"
       ></app-all-cabinets>
@@ -177,6 +178,293 @@
       <app-luxury-cabinets
         *ngIf="selectedSlider === 'luxury-cabinets'"
       ></app-luxury-cabinets>
+    </div>
+  </div>
+</main>
+
+<!-- Third Section -->
+<section class="pb-xl-0 pb-5">
+  <div class="container-fluid px-0">
+    <div class="row">
+      <div
+        class="col-xl-7 col-12 order-xl-first order-last position-relative d-flex justify-content-center align-items-center"
+      >
+        <div class="s3-content w-xl-50">
+          <h1 class="fw-light">
+            <span class="fw-bold">Design it</span> where it matters most
+          </h1>
+          <p>
+            See exactly how our cabinets will look in your home - just snap,
+            upload, and explore the possibilities.
+          </p>
+          <div
+            class="d-flex flex-xl-column flex-row align-items-xl-start align-items-center justify-content-between imageSlider pt-5"
+          >
+            <div class="d-flex flex-column">
+              <label for="imageSlideIn">Slide To Try </label>
+              <input
+                type="range"
+                name="image-slider"
+                class="mt-4"
+                id="imageSlidIn"
+                min="0"
+                max="100"
+                value="0"
+                step="1"
+              />
+            </div>
+
+            <button class="see-more mt-5 ms-3 w-fit rounded-0">generate</button>
+          </div>
+        </div>
+        <div class="slider-image overflow-x-hidden overflow-y-hidden">
+          <img
+            src="images/other/placeholder.svg"
+            height="610"
+            width="800"
+            loading="lazy"
+            id="main-image"
+            alt="Placeholder"
+          />
+          <img
+            src="images/other/image-filled.svg"
+            height="610"
+            width="800"
+            class="slider-image-2 w-fit"
+          />
+        </div>
+      </div>
+      <div class="col-xl-5 col-12">
+        <div class="bg-dark-main s3-l"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Fourth Section -->
+<section
+  style="height: 60vh"
+  class="position-relative d-flex justify-content-center align-items-center"
+>
+  <div class="overlay"></div>
+  <img
+    ngSrc="images/other/green-kitchen.png"
+    class="object-fit-cover"
+    fill
+    alt="Kitchen"
+  />
+  <div
+    class="d-flex flex-column align-items-center justify-content-center position-relative z-2 py-5 px-lg-0 px-5"
+    style="max-width: 600px"
+  >
+    <h2 class="fw-bold text-white text-center">
+      Excepteur sint occaecat cupidatat
+    </h2>
+    <p class="text-white text-center">
+      Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla
+      lacus nec metus bibendum egestas.
+    </p>
+
+    <button class="see-more mt-5 text-white">see more</button>
+  </div>
+</section>
+
+<!-- Fifth Section -->
+<section class="bg-dark-main custom-padding-2">
+  <div class="custom-container-2">
+    <h2 class="fw-light text-white">
+      Our finest <span class="fw-bold">cabinetry</span> projects
+    </h2>
+    <div class="splide ms-xl-5 mt-5" id="cabinetry-slider">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide w-fit">
+            <img
+              class="cabinet-image"
+              src="images/other/slider-image-1.png"
+              alt="Kitchen-1"
+            />
+          </li>
+          <li class="splide__slide w-fit">
+            <img
+              class="cabinet-image"
+              src="images/other/slider-image-2.png"
+              alt="Kitchen-1"
+            />
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sixth Section -->
+<section class="custom-padding-1">
+  <div class="custom-container">
+    <div class="row g-4 p-3">
+      <div class="col-lg-6 col-12">
+        <div
+          class="d-flex flex-md-row flex-column p-3 shadow-sm align-items-center justify-content-center h-100"
+        >
+          <img
+            ngSrc="images/svg/fast-shipping.svg"
+            width="130"
+            height="90"
+            class=""
+            alt="Fast Shipping"
+          />
+          <div class="d-flex flex-column ps-lg-5 ps-0">
+            <h3 class="text-md-start text-center fw-bold py-lg-0 py-3">
+              Fast Shipping
+            </h3>
+            <p class="gray-text text-md-start text-center">
+              Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-12">
+        <div
+          class="d-flex flex-md-row flex-column p-3 shadow-sm align-items-center justify-content-center h-100"
+        >
+          <img
+            ngSrc="images/svg/expert-setup.svg"
+            width="130"
+            height="90"
+            class=""
+            alt="Fast Shipping"
+          />
+          <div class="d-flex flex-column ps-lg-5 ps-0">
+            <h3 class="text-md-start text-center fw-bold py-lg-0 py-3">
+              Expert Setup
+            </h3>
+            <p class="gray-text text-md-start text-center">
+              Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-12">
+        <div
+          class="d-flex flex-md-row flex-column p-3 shadow-sm align-items-center justify-content-center h-100"
+        >
+          <img
+            ngSrc="images/svg/Materials.svg"
+            width="130"
+            height="90"
+            class=""
+            alt="Fast Shipping"
+          />
+          <div class="d-flex flex-column ps-lg-5 ps-0">
+            <h3 class="text-md-start text-center fw-bold py-lg-0 py-3">
+              Premium Materials
+            </h3>
+            <p class="gray-text text-md-start text-center">
+              Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-12">
+        <div
+          class="d-flex flex-md-row flex-column p-3 shadow-sm align-items-center justify-content-center h-100"
+        >
+          <img
+            ngSrc="images/svg/customer-support.svg"
+            width="130"
+            height="90"
+            class=""
+            alt="Fast Shipping"
+          />
+          <div class="d-flex flex-column ps-lg-5 ps-0">
+            <h3 class="text-md-start text-center fw-bold py-lg-0 py-3">
+              Online Support
+            </h3>
+            <p class="gray-text text-md-start text-center">
+              Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Seventh Section -->
+
+<section class="custom-padding-1 bg-dark-main">
+  <div class="custom-container">
+    <div
+      class="d-flex flex-lg-row flex-column align-items-center justify-content-lg-between justify-content-center"
+    >
+      <h2 class="text-white s7-l fw-light text-lg-start text-center">
+        What <span class="fw-bold">Our Customers</span>
+        Say About Us
+      </h2>
+
+      <p class="text-white s7-r text-lg-end text-center pt-lg-0 pt-2">
+        Ad litora torquent per conubia nostra inceptos himenaeos.
+      </p>
+    </div>
+  </div>
+  <div class="custom-container-2">
+    <div class="splide pt-5" id="reviews-slider">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide w-fit">
+            <div class="review-container">
+              <div class="review-info d-flex flex-column align-items-start">
+                <img
+                  ngSrc="images/other/review-picture.png"
+                  width="143"
+                  height="143"
+                  class="rounded-circle"
+                  alt="Author Picture"
+                />
+                <h3 class="pt-xl-5 pt-3 fw-bold">Cassandra Salanza</h3>
+                <div class="gray-line"></div>
+              </div>
+              <div class="review-content pt-xl-5 pt-2">
+                Quisque faucibus ex sapien vitae pellentesque sem placerat. In
+                id cursus mi pretium tellus duis convallis. Tempus leo eu aenean
+                sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus
+                bibendum egestas.
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Eighth Section -->
+
+<section class="custom-padding-1">
+  <div class="custom-container">
+    <h2 class="fw-light text-center">
+      <span class="fw-bold">Subscribe</span> to <br />
+      Our Newsletter!
+    </h2>
+    <p class="gray-text text-center">Lorem ipsum dolor sit.</p>
+    <div class="row">
+      <div class="col-lg-2 d-lg-block d-none"></div>
+      <div class="col-lg-8 col-12">
+        <form
+          class="d-flex align-items-center justify-content-center newsletter-container"
+        >
+          <input
+            type="email"
+            name="email"
+            id="newsletter"
+            placeholder="Type your email"
+          />
+          <button type="submit" for="newsletter" class="see-more">
+            subscribe
+          </button>
+        </form>
+      </div>
+      <div class="col-lg-2 d-lg-block d-none"></div>
     </div>
   </div>
 </section>

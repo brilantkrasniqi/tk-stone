@@ -22,6 +22,9 @@ export class HomePageComponent {
 
   ngOnInit() {
     this.initializeHeroSlider();
+    this.initializeImageSlideIn();
+    this.initializeCabinetrySlider();
+    this.initializeReviewsSlider();
   }
 
   initializeHeroSlider() {
@@ -32,6 +35,59 @@ export class HomePageComponent {
       arrows: false,
       interval: 2000,
       drag: true,
+    }).mount();
+  }
+
+  initializeImageSlideIn() {
+    const imageSlider = document.getElementById(
+      'imageSlidIn',
+    ) as HTMLInputElement;
+    const mainImage = document.getElementById('main-image') as HTMLImageElement;
+    const imageSlideIn = document.querySelector('.slider-image-2');
+    imageSlider.addEventListener('input', (e: Event) => {
+      const imagePositionPercentage: number = +imageSlider.value;
+      if (imageSlideIn instanceof HTMLElement) {
+        imageSlideIn.style.left = ` ${100 - imagePositionPercentage}%`;
+
+        if (imagePositionPercentage >= 30 && imagePositionPercentage <= 89) {
+          const opacityValue = 30 + (99 - imagePositionPercentage);
+          console.log(imagePositionPercentage);
+          mainImage.style.opacity = `0.${opacityValue}`;
+        } else if (imagePositionPercentage >= 90) {
+          const opacityValue = 30 + (99 - imagePositionPercentage);
+          mainImage.style.opacity = `0.0${opacityValue}`;
+        } else {
+          mainImage.style.opacity = '1';
+        }
+      }
+    });
+  }
+
+  initializeCabinetrySlider() {
+    new Splide('#cabinetry-slider', {
+      type: 'loop',
+      perPage: 2,
+      perMove: 1,
+      pagination: false,
+      breakpoints: {
+        576: {
+          perPage: 1,
+        },
+      },
+    }).mount();
+  }
+
+  initializeReviewsSlider() {
+    new Splide('#reviews-slider', {
+      type: 'loop',
+      perPage: 2,
+      perMove: 1,
+      pagination: false,
+      breakpoints: {
+        576: {
+          perPage: 1,
+        },
+      },
     }).mount();
   }
 }
