@@ -31,9 +31,9 @@ export class HomePageComponent {
     new Splide('#hero-slider', {
       type: 'fade',
       rewind: true,
-      autoplay: false,
+      autoplay: true,
       arrows: false,
-      interval: 2000,
+      interval: 3000,
       drag: true,
     }).mount();
   }
@@ -51,7 +51,6 @@ export class HomePageComponent {
 
         if (imagePositionPercentage >= 30 && imagePositionPercentage <= 89) {
           const opacityValue = 30 + (99 - imagePositionPercentage);
-          console.log(imagePositionPercentage);
           mainImage.style.opacity = `0.${opacityValue}`;
         } else if (imagePositionPercentage >= 90) {
           const opacityValue = 30 + (99 - imagePositionPercentage);
