@@ -7,10 +7,6 @@ export const routes: Routes = [
   {
     path: '',
     component: HomePageComponent,
-    children: [
-      { path: 'all-cabinets', component: AllCabinetsComponent },
-      { path: 'express-cabinets', component: ExpressCabinetsComponent },
-    ],
   },
   {
     path: 'products',

@@ -1,0 +1,45 @@
+::ng-deep .cabinet-slider .splide__arrows {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+::ng-deep .cabinet-slider .splide__arrow {
+  background-color: transparent;
+  border: none;
+}
+::ng-deep .cabinet-slider .splide__arrow svg {
+  width: 18px;
+  height: 30px;
+  fill: rgba(141, 136, 136, 0.514);
+  transition: fill 0.15s;
+}
+::ng-deep .cabinet-slider .splide__arrow--prev {
+  transform: rotate(180deg);
+  padding-left: 50px;
+}
+::ng-deep .cabinet-slider .splide__arrow svg:hover,
+::ng-deep .cabinet-slider .splide__arrow svg:active {
+  fill: black;
+}
+
+::ng-deep .cabinet-slider .splide:not(.is-overflow) .splide__list {
+  justify-content: center;
+}
+::ng-deep .cabinet-slider img {
+  opacity: 0.6;
+  transform: scale(0.7);
+  transition:
+    transform 0.15s ease-in-out,
+    opacity 0.3s ease-in-out;
+}
+::ng-deep .cabinet-slider .is-active img {
+  transform: scale(1);
+  opacity: 1;
+}
+::ng-deep .cabinet-slider .splide__slide .slide-door-info {
+  visibility: hidden;
+}
+::ng-deep .cabinet-slider .is-active .slide-door-info {
+  visibility: visible !important;
+}
