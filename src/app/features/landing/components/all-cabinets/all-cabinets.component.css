@@ -43,3 +43,9 @@
 ::ng-deep .cabinet-slider .is-active .slide-door-info {
   visibility: visible !important;
 }
+@media (max-width: 576px) {
+  ::ng-deep .cabinet-slider img {
+    width: 160px;
+    height: 300px;
+  }
+}

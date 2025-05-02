@@ -6,7 +6,7 @@
         class="col-xl-5 col-12 d-flex align-items-center justify-content-center position-relative bg-dark-main z-1 hero-left"
       >
         <div
-          class="d-flex flex-column align-items-xl-start align-items-center justify-content-center hero-content"
+          class="d-flex flex-column align-items-xl-start align-items-center justify-content-xl-center justify-content-end hero-content pb-xl-0 pb-4 px-xl-0 px-5"
         >
           <h1
             class="text-white m-0 overflow-y-hidden fw-bold text-xl-start text-center"
@@ -72,12 +72,12 @@
     <div class="row">
       <div class="col-xl-6 col-12">
         <div
-          class="d-xl-inline-block d-flex flex-column align-items-center pb-xl-0 pb-5"
+          class="d-xl-inline-block d-flex flex-column align-items-xl-center align-items-start pb-xl-0 pb-5"
         >
-          <h2 class="pb-4">
+          <h2 class="pb-xl-6 pb-1">
             Trusted by over <span class="fw-bold">650 clients</span>
           </h2>
-          <span class="gray-line mt-5"></span>
+          <span class="gray-line mt-xl-5 mt-0"></span>
         </div>
       </div>
       <div class="col-xl-6 col-12">
@@ -85,8 +85,7 @@
           class="d-flex align-items-center w-100 justify-content-evenly flex-wrap"
         >
           <div
-            class="d-flex flex-column align-items-center mt-md-0 mt-3"
-            style="width: 150px"
+            class="d-flex flex-column align-items-center mt-md-0 mt-3 client-wrapper"
           >
             <img
               ngSrc="images/svg/projects-svg.svg"
@@ -94,12 +93,11 @@
               height="80"
               alt="Projects"
             />
-            <h2 class="orange-text fw-bold pt-4">80</h2>
+            <h2 class="orange-text fw-bold pt-xl-4 pt-2">80</h2>
             <p>projects</p>
           </div>
           <div
-            class="d-flex flex-column align-items-center mt-md-0 mt-3"
-            style="width: 150px"
+            class="d-flex flex-column align-items-center mt-md-0 mt-3 client-wrapper"
           >
             <img
               ngSrc="images/svg/clients-svg.svg"
@@ -107,12 +105,15 @@
               height="80"
               alt="Happy Clients"
             />
-            <h2 class="orange-text fw-bold pt-4">365</h2>
+            <h2
+              class="orange-text text-xl-start text-center fw-bold pt-xl-4 pt-2"
+            >
+              365
+            </h2>
             <p>happy clients</p>
           </div>
           <div
-            class="d-flex flex-column align-items-center mt-md-0 mt-3"
-            style="width: 150px"
+            class="d-flex flex-column align-items-center mt-md-0 mt-3 client-wrapper"
           >
             <img
               ngSrc="images/svg/team-members-svg.svg"
@@ -120,8 +121,8 @@
               height="80"
               alt="Team Members"
             />
-            <h2 class="orange-text fw-bold pt-4">30</h2>
-            <p class="text-nowrap">team members</p>
+            <h2 class="orange-text fw-bold pt-xl-4 pt-2">30</h2>
+            <p class="text-xl-start text-center">team members</p>
           </div>
         </div>
       </div>
@@ -141,18 +142,18 @@
       </div>
       <div class="col-md-4 d-md-inline-block d-none"></div>
       <div class="col-12 pt-5">
-        <div class="d-flex align-items-center justify-content-center">
-          <div class="pe-3">
+        <div class="d-flex align-items-center justify-content-center flex-wrap">
+          <div class="pe-xl-3 pe-1">
             <a
-              class="link-hover user-select-none p-3"
+              class="link-hover user-select-none p-xl-3 p-1"
               (click)="selectedSlider = 'all-cabinets'"
               [ngClass]="{ 'active-link': selectedSlider === 'all-cabinets' }"
               >All</a
             >
           </div>
-          <div class="pe-3">
+          <div class="pe-xl-3 pe-1">
             <a
-              class="link-hover user-select-none p-3"
+              class="link-hover user-select-none p-xl-3 p-1"
               (click)="selectedSlider = 'express-cabinets'"
               [ngClass]="{
                 'active-link': selectedSlider === 'express-cabinets',
@@ -160,9 +161,9 @@
               >Express Cabinets</a
             >
           </div>
-          <div class="pe-3">
+          <div class="pe-xl-3 pe-1">
             <a
-              class="link-hover user-select-none p-3"
+              class="link-hover user-select-none p-xl-3 p-1"
               (click)="selectedSlider = 'all-cabinets'"
               [ngClass]="{ 'active-link': selectedSlider === 'all-cabinets' }"
               >Premium Series</a
@@ -170,7 +171,7 @@
           </div>
           <div class="pe-0">
             <a
-              class="link-hover user-select-none p-3"
+              class="link-hover user-select-none p-xl-3 p-1"
               (click)="selectedSlider = 'luxury-cabinets'"
               [ngClass]="{
                 'active-link': selectedSlider === 'luxury-cabinets',
@@ -197,6 +198,7 @@
 </main>
 
 <!-- Generate Image Section -->
+<!-- TODO: Align slider and button -->
 <section class="pb-xl-0 pb-5">
   <div class="container-fluid">
     <div class="row">
@@ -316,19 +318,19 @@
 <section class="custom-padding-1">
   <div class="custom-container">
     <div class="row g-4 p-3">
-      <div class="col-lg-6 col-12">
+      <div class="col-6">
         <div
-          class="d-flex flex-md-row flex-column p-3 shadow-sm align-items-center justify-content-center h-100"
+          class="d-flex flex-md-row flex-column p-lg-3 p-1 shadow-sm align-items-center justify-content-center h-100"
         >
           <img
             ngSrc="images/svg/fast-shipping.svg"
             width="130"
             height="90"
-            class=""
+            class="banner-icon"
             alt="Fast Shipping"
           />
           <div class="d-flex flex-column ps-lg-5 ps-0">
-            <h3 class="text-md-start text-center fw-bold py-lg-0 py-3">
+            <h3 class="text-md-start text-center fw-bold py-lg-0 py-lg-3 py-1">
               Fast Shipping
             </h3>
             <p class="gray-text text-md-start text-center">
@@ -337,19 +339,19 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-6 col-12">
+      <div class="col-6">
         <div
-          class="d-flex flex-md-row flex-column p-3 shadow-sm align-items-center justify-content-center h-100"
+          class="d-flex flex-md-row flex-column p-lg-3 p-1 shadow-sm align-items-center justify-content-center h-100"
         >
           <img
             ngSrc="images/svg/expert-setup.svg"
             width="130"
             height="90"
-            class=""
+            class="banner-icon"
             alt="Fast Shipping"
           />
           <div class="d-flex flex-column ps-lg-5 ps-0">
-            <h3 class="text-md-start text-center fw-bold py-lg-0 py-3">
+            <h3 class="text-md-start text-center fw-bold py-lg-0 py-lg-3 py-1">
               Expert Setup
             </h3>
             <p class="gray-text text-md-start text-center">
@@ -358,19 +360,19 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-6 col-12">
+      <div class="col-6">
         <div
-          class="d-flex flex-md-row flex-column p-3 shadow-sm align-items-center justify-content-center h-100"
+          class="d-flex flex-md-row flex-column p-lg-3 p-1 shadow-sm align-items-center justify-content-center h-100"
         >
           <img
             ngSrc="images/svg/Materials.svg"
             width="130"
             height="90"
-            class=""
+            class="banner-icon"
             alt="Fast Shipping"
           />
           <div class="d-flex flex-column ps-lg-5 ps-0">
-            <h3 class="text-md-start text-center fw-bold py-lg-0 py-3">
+            <h3 class="text-md-start text-center fw-bold py-lg-0 py-lg-3 py-1">
               Premium Materials
             </h3>
             <p class="gray-text text-md-start text-center">
@@ -379,19 +381,19 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-6 col-12">
+      <div class="col-6">
         <div
-          class="d-flex flex-md-row flex-column p-3 shadow-sm align-items-center justify-content-center h-100"
+          class="d-flex flex-md-row flex-column p-lg-3 p-1 shadow-sm align-items-center justify-content-center h-100"
         >
           <img
             ngSrc="images/svg/customer-support.svg"
             width="130"
             height="90"
-            class=""
+            class="banner-icon"
             alt="Fast Shipping"
           />
           <div class="d-flex flex-column ps-lg-5 ps-0">
-            <h3 class="text-md-start text-center fw-bold py-lg-0 py-3">
+            <h3 class="text-md-start text-center fw-bold py-lg-0 py-lg-3 py-1">
               Online Support
             </h3>
             <p class="gray-text text-md-start text-center">

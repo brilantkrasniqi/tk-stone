@@ -62,8 +62,16 @@
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 576px) {
   .nav-menu {
     width: 320px;
+  }
+  .nav-icons {
+    width: 14px !important;
+    height: 14px !important;
+  }
+  .line {
+    width: 20px;
+    height: 2px;
   }
 }
