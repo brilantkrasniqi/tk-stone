@@ -66,7 +66,7 @@
   </div>
 </section>
 
-<!-- First Section -->
+<!-- Client Statistics Section -->
 <section class="custom-padding-1">
   <div class="custom-container">
     <div class="row">
@@ -129,65 +129,71 @@
   </div>
 </section>
 
-<!--Second Section-->
+<!--Door Slider / Cabinetry Section-->
 <main class="custom-padding-2" style="background-color: #c7c7c7">
-  <div class="row">
-    <div class="col-md-4 col-0 d-md-block d-none"></div>
-    <div class="col-md-4 col-12">
-      <h2 class="fw-light px-5 text-center">
-        Elevate Your Space with <span class="fw-bold">Our Cabinets</span>
-      </h2>
-    </div>
-    <div class="col-md-4 col-0 d-md-block d-none"></div>
-    <div class="col-12 pt-5">
-      <div class="d-flex align-items-center justify-content-center">
-        <div class="pe-3">
-          <a
-            class="link-hover user-select-none"
-            (click)="selectedSlider = 'all-cabinets'"
-            [ngClass]="{ 'active-link': selectedSlider === 'all-cabinets' }"
-            >All</a
-          >
-        </div>
-        <div class="pe-3">
-          <a
-            class="link-hover user-select-none"
-            (click)="selectedSlider = 'express-cabinets'"
-            [ngClass]="{ 'active-link': selectedSlider === 'express-cabinets' }"
-            >Express Cabinets</a
-          >
-        </div>
-        <div class="pe-3">
-          <a
-            class="link-hover user-select-none"
-            (click)="selectedSlider = 'luxury-cabinets'"
-            [ngClass]="{ 'active-link': selectedSlider === 'luxury-cabinets' }"
-            >Luxury Series</a
-          >
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 col-0 p-0 d-md-inline-block d-none"></div>
+      <div class="col-md-4 col-12">
+        <h2 class="fw-light px-5 text-center">
+          Elevate Your Space with <span class="fw-bold">Our Cabinets</span>
+        </h2>
+      </div>
+      <div class="col-md-4 d-md-inline-block d-none"></div>
+      <div class="col-12 pt-5">
+        <div class="d-flex align-items-center justify-content-center">
+          <div class="pe-3">
+            <a
+              class="link-hover user-select-none"
+              (click)="selectedSlider = 'all-cabinets'"
+              [ngClass]="{ 'active-link': selectedSlider === 'all-cabinets' }"
+              >All</a
+            >
+          </div>
+          <div class="pe-3">
+            <a
+              class="link-hover user-select-none"
+              (click)="selectedSlider = 'express-cabinets'"
+              [ngClass]="{
+                'active-link': selectedSlider === 'express-cabinets',
+              }"
+              >Express Cabinets</a
+            >
+          </div>
+          <div class="pe-3">
+            <a
+              class="link-hover user-select-none"
+              (click)="selectedSlider = 'luxury-cabinets'"
+              [ngClass]="{
+                'active-link': selectedSlider === 'luxury-cabinets',
+              }"
+              >Luxury Series</a
+            >
+          </div>
         </div>
       </div>
-    </div>
-    <div class="">
-      <!-- TODO: Add breakpoints to each slider, and see if we can refractor the code -->
-      <app-all-cabinets
-        *ngIf="selectedSlider === 'all-cabinets'"
-      ></app-all-cabinets>
-      <app-express-cabinets
-        *ngIf="selectedSlider === 'express-cabinets'"
-      ></app-express-cabinets>
-      <app-luxury-cabinets
-        *ngIf="selectedSlider === 'luxury-cabinets'"
-      ></app-luxury-cabinets>
+      <div class="">
+        <!-- TODO: Add breakpoints to each slider, and see if we can refractor the code -->
+        <app-all-cabinets
+          *ngIf="selectedSlider === 'all-cabinets'"
+        ></app-all-cabinets>
+        <app-express-cabinets
+          *ngIf="selectedSlider === 'express-cabinets'"
+        ></app-express-cabinets>
+        <app-luxury-cabinets
+          *ngIf="selectedSlider === 'luxury-cabinets'"
+        ></app-luxury-cabinets>
+      </div>
     </div>
   </div>
 </main>
 
-<!-- Third Section -->
+<!-- Generate Image Section -->
 <section class="pb-xl-0 pb-5">
-  <div class="container-fluid px-0">
+  <div class="container-fluid">
     <div class="row">
       <div
-        class="col-xl-7 col-12 order-xl-first order-last position-relative d-flex justify-content-center align-items-center"
+        class="col-xl-7 col-12 p-0 order-xl-first order-last position-relative d-flex justify-content-center align-items-center"
       >
         <div class="s3-content w-xl-50">
           <h1 class="fw-light">
@@ -234,7 +240,7 @@
           />
         </div>
       </div>
-      <div class="col-xl-5 col-12">
+      <div class="col-xl-5 col-12 p-0">
         <div class="bg-dark-main s3-l"></div>
       </div>
     </div>
@@ -269,7 +275,7 @@
   </div>
 </section>
 
-<!-- Fifth Section -->
+<!-- Showcase work Section -->
 <section class="bg-dark-main custom-padding-2">
   <div class="custom-container-2">
     <h2 class="fw-light text-white">
@@ -298,7 +304,7 @@
   </div>
 </section>
 
-<!-- Sixth Section -->
+<!-- Banners Section -->
 <section class="custom-padding-1">
   <div class="custom-container">
     <div class="row g-4 p-3">
@@ -390,8 +396,7 @@
   </div>
 </section>
 
-<!-- Seventh Section -->
-
+<!-- Reviews Section -->
 <section class="custom-padding-1 bg-dark-main">
   <div class="custom-container">
     <div
@@ -432,14 +437,31 @@
               </div>
             </div>
           </li>
+          <li class="splide__slide w-fit">
+            <div class="review-container h-100">
+              <div class="review-info d-flex flex-column align-items-start">
+                <img
+                  ngSrc="images/other/review-picture.png"
+                  width="143"
+                  height="143"
+                  class="rounded-circle"
+                  alt="Author Picture"
+                />
+                <h3 class="pt-xl-5 pt-3 fw-bold">Cassandra Salanza</h3>
+                <div class="gray-line"></div>
+              </div>
+              <div class="review-content pt-xl-5 pt-2">
+                Quisque faucibus ex sapien vitae pellentesque sem placerat. In
+              </div>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Eighth Section -->
-
+<!-- Newsletter Section -->
 <section class="custom-padding-1">
   <div class="custom-container">
     <h2 class="fw-light text-center">

@@ -61,6 +61,7 @@
     transform: translateX(-50%);
   }
 }
+
 @media (max-width: 425px) {
   .nav-menu {
     width: 320px;
