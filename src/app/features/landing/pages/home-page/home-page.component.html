@@ -144,7 +144,7 @@
         <div class="d-flex align-items-center justify-content-center">
           <div class="pe-3">
             <a
-              class="link-hover user-select-none"
+              class="link-hover user-select-none p-3"
               (click)="selectedSlider = 'all-cabinets'"
               [ngClass]="{ 'active-link': selectedSlider === 'all-cabinets' }"
               >All</a
@@ -152,7 +152,7 @@
           </div>
           <div class="pe-3">
             <a
-              class="link-hover user-select-none"
+              class="link-hover user-select-none p-3"
               (click)="selectedSlider = 'express-cabinets'"
               [ngClass]="{
                 'active-link': selectedSlider === 'express-cabinets',
@@ -162,7 +162,15 @@
           </div>
           <div class="pe-3">
             <a
-              class="link-hover user-select-none"
+              class="link-hover user-select-none p-3"
+              (click)="selectedSlider = 'all-cabinets'"
+              [ngClass]="{ 'active-link': selectedSlider === 'all-cabinets' }"
+              >Premium Series</a
+            >
+          </div>
+          <div class="pe-0">
+            <a
+              class="link-hover user-select-none p-3"
               (click)="selectedSlider = 'luxury-cabinets'"
               [ngClass]="{
                 'active-link': selectedSlider === 'luxury-cabinets',
@@ -441,7 +449,7 @@
             <div class="review-container h-100">
               <div class="review-info d-flex flex-column align-items-start">
                 <img
-                  ngSrc="images/other/review-picture.png"
+                  ngSrc="images/other/door-1.png"
                   width="143"
                   height="143"
                   class="rounded-circle"
@@ -456,6 +464,67 @@
             </div>
           </li>
         </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Partners Logo -->
+<!-- TODO: Reduce container Padding -->
+<section class="custom-padding-3 shadow-sm">
+  <div class="container-fluid">
+    <div class="row">
+      <div
+        class="col-xl-8 col-sm-8 col-7 d-flex align-items-center justify-content-center"
+      >
+        <div class="splide w-100" id="partners-logo-slider">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide w-fit me-3">
+                <img
+                  src="images/svg/logo2.svg"
+                  height="60"
+                  class="w-100"
+                  alt="Life Art Cabinetry Logo"
+                />
+              </li>
+              <li class="splide__slide w-fit me-3">
+                <img
+                  src="images/svg/knb-logo-2.svg"
+                  height="60"
+                  class="w-100"
+                  alt="Kitchen and Bath"
+                />
+              </li>
+              <li class="splide__slide w-fit me-3">
+                <img
+                  src="images/svg/logo2.svg"
+                  height="60"
+                  class="w-100"
+                  alt="Life Art Cabinetry Logo"
+                />
+              </li>
+              <li class="splide__slide w-fit me-3">
+                <img
+                  src="images/svg/knb-logo-2.svg"
+                  height="60"
+                  class="w-100"
+                  alt="Kitchen and Bath"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-xl-4 col-sm-4 col-5 custom-padding-right bg-white position-relative"
+      >
+        <div class="">
+          <h2 class="fw-light text-end">
+            We work with <span class="fw-bold">the best</span>
+          </h2>
+          <div class="orange-line ms-auto mt-3"></div>
+        </div>
       </div>
     </div>
   </div>
