@@ -1,9 +1,10 @@
 import { NgClass, NgIf, NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
-import Splide from '@splidejs/splide';
 import { AllCabinetsComponent } from '../../components/all-cabinets/all-cabinets.component';
 import { ExpressCabinetsComponent } from '../../components/express-cabinets/express-cabinets.component';
 import { LuxuryCabinetsComponent } from '../../components/luxury-cabinets/luxury-cabinets.component';
+import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
+import Splide from '@splidejs/splide';
 @Component({
   selector: 'app-home-page',
   imports: [
@@ -25,6 +26,7 @@ export class HomePageComponent {
     this.initializeImageSlideIn();
     this.initializeCabinetrySlider();
     this.initializeReviewsSlider();
+    this.initializePartnersSlider();
   }
 
   initializeHeroSlider() {
@@ -88,5 +90,18 @@ export class HomePageComponent {
         },
       },
     }).mount();
+  }
+
+  initializePartnersSlider() {
+    new Splide('#partners-logo-slider', {
+      type: 'loop',
+      drag: 'free',
+      arrows: false,
+      focus: 'center',
+      pagination: false,
+      // autoScroll: {
+      //   speed: -1,
+      // },
+    }).mount({ AutoScroll });
   }
 }
