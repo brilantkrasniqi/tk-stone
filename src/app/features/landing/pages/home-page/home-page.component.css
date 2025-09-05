@@ -26,10 +26,10 @@
   opacity: 1 !important;
 }
 .hero-right {
-  height: 100vh;
+  height: 90vh;
 }
 #hero-slider .splide__list {
-  height: 100vh;
+  height: 90vh;
   position: relative;
 }
 #hero-slider .splide__track,
@@ -54,6 +54,10 @@
 }
 ::ng-deep #hero-slider .is-active {
   background-color: white !important;
+}
+
+.client-wrapper {
+  width: 150px;
 }
 
 /* Third Section */
@@ -235,6 +239,11 @@
   .slider-image img,
   .slider-image-2 {
     width: 600px;
+  }
+  .banner-icon {
+    min-width: 90px !important;
+
+    object-fit: contain;
   }
 }
 

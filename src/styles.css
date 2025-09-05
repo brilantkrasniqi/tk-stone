@@ -42,6 +42,10 @@
   --main-orange: #ec4e15;
 }
 
+* {
+  touch-action: manipulation;
+}
+
 body {
   margin: 0;
   padding: 0;
